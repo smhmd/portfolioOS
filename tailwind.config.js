@@ -115,7 +115,10 @@ const transitionTimingFunction = {
 }
 
 module.exports = {
-  content: ['./index.html', './**/*.tsx'],
+  content: [
+    './index.html',
+    './{assets,components,public,views}/**/*.{tsx,svg}',
+  ],
   theme: {
     fontSize,
     textColor,
