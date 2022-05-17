@@ -1,7 +1,6 @@
 import { EdgeSVG, VSCodeSVG, WordSVG } from '~/assets/svg'
+import * as Constants from '~/constants'
 import { defineApp } from '~/utils'
-
-import { VSCode } from './vscode'
 
 export type AppID = string
 export const defaultApps: AppID[] = ['vscode', 'edge', 'word']
@@ -11,14 +10,13 @@ export const apps: Record<AppID, App> = {
     id: 'vscode',
     title: 'Code',
     icon: VSCodeSVG,
-    // src: 'https://stackblitz.com/github/smhmd/portfolioOS?embed=1&theme=dark&view=editor',
-    component: VSCode,
+    src: Constants.VSCODE_IFRAME_SRC,
   }),
   edge: defineApp({
     id: 'edge',
     title: 'Microsoft Edge',
     icon: EdgeSVG,
-    src: 'https://www.bing.com',
+    src: Constants.EDGE_STARTUP_PAGE,
   }),
   word: defineApp({
     id: 'word',
